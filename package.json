@@ -23,5 +23,11 @@
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^2.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "history": "^1.17.0",
+    "react-router": "^1.0.3",
+    "reflux": "^0.3.0",
+    "whatwg-fetch": "^0.10.1"
+  }
 }
