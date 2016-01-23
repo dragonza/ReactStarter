@@ -7,7 +7,7 @@ module.exports = {
   get(url) {
     return fetch(rootUrl + url, {
       headers: {
-        'Authorization' : 'Client-ID' + apiKey
+        'Authorization' : 'Client-ID ' + apiKey
       }
     })
     .then(function(response) {
