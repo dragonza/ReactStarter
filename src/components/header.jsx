@@ -17,6 +17,7 @@ var Header = React.createClass({
   componentWillMount(){
     Actions.getTopics();
   },
+
   render: function() {
     return (
         <nav className="navbar navbar-default header">

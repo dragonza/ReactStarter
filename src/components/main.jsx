@@ -6,7 +6,6 @@ var TopicList = require('./topics-list');
 
 var Main = React.createClass({
   render: function() {
-
     return (
       <div>
         <Header />

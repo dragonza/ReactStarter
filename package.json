@@ -26,6 +26,7 @@
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "history": "^1.17.0",
+    "lodash": "^4.1.0",
     "react-router": "^1.0.3",
     "reflux": "^0.3.0",
     "whatwg-fetch": "^0.10.1"

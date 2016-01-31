@@ -2,6 +2,7 @@ var React = require('react');
 var Reflux = require('reflux');
 var Actions = require('../actions/actions');
 var ImageStore = require('../stores/image-store');
+var ImagePreview = require('../components/image-preview')
 
 module.exports = React.createClass({
   mixins: [
@@ -9,23 +10,35 @@ module.exports = React.createClass({
   ],
   getInitialState(){
     return {
-      images:{}
+      images:[]
     }
 
   },
   componentWillMount(){
     Actions.getImages(this.props.params.id);
+
   },
+
   componentWillReceiveProps(nextProps){
-    Actions.getImages(nextProps.params.id);
+    if (this.props.params.id != nextProps.params.id){
+      Actions.getImages(nextProps.params.id);
+    }
+  },
+  renderImages() {
+
+    return this.state.images.slice(0,20).map(function(image) {
+      return <ImagePreview key={image.id} {...image}/>
+    })
   },
   render() {
+
     return (
-        <div>{this.renderImages()}</div>
+        <div className='topic'>
+          {this.renderImages()}</div>
     )
 
   },
-  onChange(events, images) {
+  onChange(events,images) {
     this.setState({
       images:images
     })
